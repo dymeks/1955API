@@ -1,0 +1,1 @@
+const quotes = require('../controllers/quotes.js')();
