@@ -3,11 +3,11 @@ var app = express();              //creates an express object we can use.
 var bodyParser = require('body-parser'); //reuires body parser
 
 //require our mongoose configurations (Setting up the database).
-require('./server/config/mongoose.js')();
+
 
 var path = require('path'); 
 var session = require('express-session');
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './client/static')));
 // Setting our Views Folder Directory
 app.set('views', path.join(__dirname, './client/views'));
